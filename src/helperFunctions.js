@@ -1,7 +1,6 @@
 const api = `https://api.openweathermap.org/data/2.5/weather?`
 const apiId = import.meta.env.VITE_APIKEY
 
-console.log("api key",import.meta.env.VITE_APIKEY)
 
 export const imageApi = `http://openweathermap.org/img/wn/`
 
