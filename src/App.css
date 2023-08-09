@@ -1,0 +1,171 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #42adfd;
+}
+
+.appContainer {
+  background-color: #fff;
+  width: 300px;
+  margin: 25svh auto;
+  border-radius: 10px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #43aefc;
+  gap: 10px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  /* padding: 10px 20px; */
+}
+
+hr {
+  margin: 0;
+}
+
+.appContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+  position: relative;
+}
+
+input,
+button {
+  padding: 8px 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(165, 165, 165);
+  outline: none;
+  font-size: 16px;
+  color: gray;
+  width: -webkit-fill-available;
+}
+
+.buttonDiv {
+  position: relative;
+}
+
+.buttonDiv .spinner {
+  top: 10px;
+  right: 25px;
+  fill: white;
+}
+
+button {
+  background-color: #43aefc;
+  color: #fff;
+  font-weight: 500;
+  border: 0px;
+  margin: 0 20px 20px;
+}
+
+input::placeholder {
+  text-align: center;
+  color: rgb(165, 165, 165);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  color: rgb(165, 165, 165);
+}
+
+/* To show the lines on right 
+and left sides of the text */
+.divider::after,
+.divider::before {
+  content: "";
+  border-top: 0.3px solid rgb(165, 165, 165);
+  flex: 1;
+}
+
+.weatherData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.temp {
+  font-size: 32px;
+  font-weight: bold;
+}
+.desc {
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+.location {
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.bottom {
+  display: flex;
+  width: 100%;
+}
+
+.bottom > div {
+  width: 50%;
+  border-top: 0.3px solid rgb(165, 165, 165);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  margin-top: 10px;
+  gap: 5px;
+}
+
+.gutter {
+  width: 1px !important;
+  height: auto;
+  border-left: 0.3px solid rgb(165, 165, 165);
+}
+
+.bottomTemp {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.bottomAttr {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.bottom svg {
+  height: 40px;
+  width: 32px;
+  fill: #42adfd;
+}
+
+/* styles.css (or your preferred CSS file) */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 31px;
+  right: 25px;
+}
