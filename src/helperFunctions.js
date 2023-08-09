@@ -1,6 +1,10 @@
 const api = `https://api.openweathermap.org/data/2.5/weather?`
 const apiId = import.meta.env.VITE_APIKEY
 
+console.log("api key",import.meta.env.VITE_APIKEY)
+console.log("api",import.meta.env)
+
+
 export const imageApi = `http://openweathermap.org/img/wn/`
 
 export async function fetchData(text,lat,lng){
