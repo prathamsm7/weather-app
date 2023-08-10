@@ -169,3 +169,8 @@ and left sides of the text */
   top: 31px;
   right: 25px;
 }
+
+.head > svg,
+.buttonDiv > button {
+  cursor: pointer;
+}
