@@ -41,7 +41,9 @@ const Weather = () => {
         (error) => {
           console.error(error);
           setLoading({ status: false, type: "" });
-          toast.error("Your precise location could not be determined.");
+          toast.error(
+            "Your precise location could not be determined. Please allow location permission."
+          );
         }
       );
     } else {
