@@ -69,7 +69,6 @@ const Weather = () => {
     });
 
     setTypingTimeout = setTimeout(() => {
-      console.log("User stopped typing:");
       // Perform actions when user stops typing
       setLoading({
         type: "",
@@ -77,7 +76,7 @@ const Weather = () => {
       });
 
       clearTimeout(setTypingTimeout);
-    }, 1000);
+    }, 800);
   }
 
   //Get Data on form submit
@@ -148,8 +147,14 @@ const Weather = () => {
               )}
               <div className="divider">or</div>
             </form>
-            <div className="buttonDiv">
-              <button onClick={getLocation}>Get Device Location</button>
+            <div
+              className={`buttonDiv ${
+                loading.status ? "buttonDivDisabled" : ""
+              }`}
+            >
+              <button onClick={getLocation} disabled={loading.status}>
+                Get Device Location
+              </button>
               {loading.status && loading.type === "button" && (
                 <BiLoaderCircle className="spinner" />
               )}

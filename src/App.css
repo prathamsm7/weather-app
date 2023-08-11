@@ -174,3 +174,8 @@ and left sides of the text */
 .buttonDiv > button {
   cursor: pointer;
 }
+
+.buttonDivDisabled > button {
+  opacity: 0.5;
+  cursor: default;
+}
